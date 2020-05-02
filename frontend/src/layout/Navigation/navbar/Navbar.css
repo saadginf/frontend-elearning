@@ -1,0 +1,57 @@
+img{
+height: 100px;   
+
+}
+.navbar-nav a{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 60px;
+   
+} 
+#links{
+    color:#3E4300;
+}
+#links:hover{
+    color:gray;
+}
+#sign-in{
+    border: 1px solid #3E4300;
+    color: #3E4300;
+    border-radius:5px;
+    
+}
+#sign-up:hover{
+    border: 1px solid #3E4300;
+    color: #3E4300;
+    background-color:rgba(63, 67, 0, 0.452) ;
+}
+#sign-up{
+    border: 1px solid #3E4300;
+    background-color:#3E4300 ;
+    color: white;
+    border-radius: 5px;
+}
+#sign-in:hover{
+    border: 1px solid #3E4300;
+    background-color:rgba(63, 67, 0, 0.452) ;
+    color: white;
+    border-radius: 5px;
+   
+}
+@media only screen and (max-width: 990px) {
+    .navbar-nav a {
+        margin-left: 0;
+        text-align: center;
+     
+    }
+    img{
+        height: 90px;   
+        
+        }
+        #sign-up{
+            margin-top: 10PX;
+        }
+        #sign-in{
+            margin-top: 10PX;
+        }
+  }
