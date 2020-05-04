@@ -1,0 +1,23 @@
+.big-card{
+    background-image: url("../../assets/navbar.jpg");
+   height: 400px;
+   border: 1px solid rgba(63, 67, 0, 0.548); 
+   display: flex;
+   align-items: center;
+}
+.presenation-card{
+    margin-left: 50px;
+   
+}
+@media only screen and (max-width: 990px) {
+    .big-card{
+    
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .presenation-card{
+        margin-left: 0;
+       text-align: center;
+    }
+}
