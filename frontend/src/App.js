@@ -12,14 +12,15 @@ import Blog from './containers/blog/Blog'
 import Layout from './layout/Layout'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-function App() {
-  return (
-<Layout>
+const App = () => {
+ ;
+ return(
+
     <Router>
+      <Layout>
       <Switch>
-        <Route path="/courses" exact>
-          <Courses />
-        </Route>
+        <Route path="/courses" exact component={Courses}/>
+      
         <Route path="/blog" exact>
           <Blog />
         </Route>
@@ -28,8 +29,9 @@ function App() {
         </Route>
         <Redirect to="/"/>
       </Switch>
+      </Layout>
   </Router>
-  </Layout>
+ 
   );
 }
 

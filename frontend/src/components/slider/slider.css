@@ -1,0 +1,24 @@
+
+.viewall{
+  
+    text-align: center;
+    padding: 20px;
+}
+.viewall a{
+    text-decoration: underline;
+    color: green;
+    font-weight: bold;
+    
+
+}
+
+.carousel-item-padding-40-px{
+ margin-bottom: 25px;
+text-align: center;
+display:flex ;
+justify-content: center;
+}
+.carousel-item-padding-40-px img{
+    border-radius: 100%;
+    margin-bottom: 15px;
+}

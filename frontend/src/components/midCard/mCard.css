@@ -1,0 +1,35 @@
+.m-card{
+    background-color: #ffffff8c;
+   height: 400px;
+   display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 90px;
+  
+}
+@media only screen and (max-width: 1300px) {
+    #carousel{
+       display: none;
+     }
+     .team-presetation h1 {
+       text-align: center;
+    }
+    .team-presetation{
+        text-align: center;
+    }
+    .m-card{
+    
+        margin-bottom: 20px;
+        height: 200px;
+      
+    }
+}
+.team-presetation{
+    width: 500px;
+}
+.team-presetation h1 {
+    
+    padding: 5px;
+    color: white;
+    background-color: #3E4300;
+}

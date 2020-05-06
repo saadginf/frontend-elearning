@@ -3,8 +3,9 @@ import './Navbar.css'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 const Navheader = props => {
+
     return (
-        <Navbar className="bg-white" collapseOnSelect expand="lg" >
+  <Navbar className={props.loc==="/" ? "bg-white": "bg-green" } collapseOnSelect expand="lg" >
   <Navbar.Brand href="/">
     <img src={props.imgsrc} alt="Logo"  className="d-inline-block align-top"/>
   </Navbar.Brand>

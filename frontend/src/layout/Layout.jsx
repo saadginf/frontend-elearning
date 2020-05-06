@@ -1,12 +1,13 @@
 import React from 'react'
-
+import {withRouter} from 'react-router-dom'
 import Nabar from './Navigation/navbar/Navheader'
 import Footer from './Navigation/footer/Footer'
 import Logo from '../assets/logo.png'
 const Layout = props => {
+    console.log(props.location.pathname)
     return (
         <>
-        <Nabar imgsrc={Logo}/>
+        <Nabar imgsrc={Logo} loc={props.location.pathname}/>
         <main>
             {props.children}
         </main>
@@ -15,4 +16,4 @@ const Layout = props => {
     )
 };
 
-export default Layout;
+export default withRouter(Layout);

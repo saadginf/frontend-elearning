@@ -1,0 +1,8 @@
+.course-cards-list{
+    width: 1000px;
+  
+    margin: 25px auto 25px auto;
+}
+.cl-float{
+    clear: both;
+}

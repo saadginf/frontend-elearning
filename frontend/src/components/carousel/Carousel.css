@@ -1,0 +1,12 @@
+.team-name{
+   
+    text-align: left;
+    color: black;
+    font-size: 25px;
+    font-family: 'Montserrat';
+    background-color: rgba(240, 248, 255);
+    position: absolute;
+    padding: 10px;
+    Top:-15px;
+    left: -15px;
+}

@@ -11,12 +11,15 @@ const StyledCard = styled.div`
   background-color: ${({ color }) => (color? color : 'white')};
   border: none;
   transition: all 0.2s;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   &:hover {
     cursor:pointer;
     transform: translateY(-3px);
   }
  
-  }
+  
 `;
 
 const Button = ({ children, contain, color, ...rest }) => {

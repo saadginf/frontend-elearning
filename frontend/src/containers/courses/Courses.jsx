@@ -1,9 +1,16 @@
 import React from 'react'
-
-const Courses = () => {
+import './courses.css'
+import CourseCard from "../../components/courseCard/CourseCard"
+const Courses = props => {
+    console.log(props.location)
     return (
-        <div>
-            this is the courses page
+
+        <div className="course-cards-list">
+        <CourseCard/>
+        <CourseCard/>
+        <CourseCard/>
+        <CourseCard/>
+        <div className="cl-float"></div>
         </div>
     )
 }

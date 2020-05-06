@@ -1,0 +1,35 @@
+.card-courses{
+    width: 47%;
+    float: left;
+    padding: 20px;
+    font-size: 17px;
+    font-family:Montserrat ;
+}
+.card-course{
+    padding: 10px;
+}
+.course-description{
+display: flex;
+flex-wrap: nowrap;
+
+}
+.course-description img{
+    border-radius: 100%;
+    margin: 20px 20px 20px 10px;
+    height: 90px;
+}
+.button-more{
+    text-align: right;
+    margin: 20px;
+}
+.stats-courses{
+    border-top: 1px solid rgba(128, 128, 128, 0.534);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 15px;
+}
+.stats-num{
+color: rgb(102, 109, 4);
+
+}
