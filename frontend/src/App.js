@@ -20,13 +20,8 @@ const App = () => {
       <Layout>
       <Switch>
         <Route path="/courses" exact component={Courses}/>
-      
-        <Route path="/blog" exact>
-          <Blog />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/blog" exact component={Blog}/>
+        <Route path="/" exact component={Home}/>
         <Redirect to="/"/>
       </Switch>
       </Layout>

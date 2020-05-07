@@ -17,9 +17,10 @@ height: 100px;
     transition: all 0.2s;
 }
 #links:hover{
-    color:gray;
+    color:black;
     transform: translateY(-3px);
 }
+
 #sign-in{
     border: 1px solid #3E4300;
     color: #3E4300;
