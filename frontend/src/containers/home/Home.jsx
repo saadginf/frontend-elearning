@@ -4,7 +4,6 @@ import Slider from '../../components/slider/Slider'
 import './home.css'
 import MidCard from '../../components/midCard/MidCard'
 import SecondCard from '../../components/secondCard/SecondCard'
-import Button from '../../components/button/Button'
 const Home = () => {
     return (
         <div>

@@ -1,7 +1,6 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React from 'react'
-import Card from 'react-bootstrap/Card';
 import Item from './Item'
 import img from '../../assets/1073.png';
 import './slider.css'

@@ -17,7 +17,7 @@ const CourseCard = () => {
           </div>
         </div>
         <div className="button-more">
-            <button>More</button>
+           <a href="www.google.com"  className="link-to-more">More</a>
         </div>
         <div className="stats-courses">
             <div>

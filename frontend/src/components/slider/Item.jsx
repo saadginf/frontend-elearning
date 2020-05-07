@@ -7,7 +7,7 @@ const Item = props => {
         <div> 
     <Card  style={{ width: '18rem' }}>
     <Card.Body>
-      <img src={props.image}></img>
+      <img src={props.image} alt=""></img>
     <Card.Title>{props.title}</Card.Title>
       <Card.Text>
         {props.description}
