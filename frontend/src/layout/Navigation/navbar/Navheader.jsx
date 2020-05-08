@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+
 const Navheader = props => {
 
     return (
@@ -17,8 +18,8 @@ const Navheader = props => {
       <Nav.Link href="blog"id="links">Blog</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets" id="sign-in">Sign In</Nav.Link>
-      <Nav.Link  href="#memes" id="sign-up">
+      <Nav.Link href="login" id="sign-in">Sign In</Nav.Link>
+      <Nav.Link  href="register" id="sign-up">
         Sign Up
       </Nav.Link>
     </Nav>
