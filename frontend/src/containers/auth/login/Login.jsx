@@ -1,9 +1,24 @@
-import React from 'react'
+import React , {useEffect}from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import {connect} from 'react-redux';
 import * as Yup from 'yup';
+import {withRouter} from 'react-router-dom'
 import './Login.css'
 import Logo from '../../../assets/logo.png'
-const Login = () => {
+import {loginUser} from '../../../actions/authActions'
+import Message from '../../../components/message/Message'
+
+
+
+
+const Login = props => {
+    useEffect(() => {
+        if(props.isAuth){
+            props.history.push('/')
+        }
+        // Update the document title using the browser API
+   
+      });
     return (
         <div className="login-page">
         <div className="form-container">
@@ -20,7 +35,6 @@ const Login = () => {
         initialValues={{
             email: '',
             password: '',
-            confirmPassword: ''
         }}
         validationSchema={Yup.object().shape({
             
@@ -28,14 +42,15 @@ const Login = () => {
                 .email('Email is invalid')
                 .required('Email is required'),
             password: Yup.string()
-                .min(6, 'Password must be at least 6 characters')
-                .matches(/[A-Z]{2}\d{2}[A-Z]{2}\d{4}$/i,'invalid Password')
+    
+                
                 .required('Password is required'),
 
         })}
         onSubmit={fields => {
             console.log(fields)
-            alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields))
+            props.login(fields,props.history)
+          
         }}
         render={({ errors, status, touched }) => (
             <Form>
@@ -54,6 +69,7 @@ const Login = () => {
                 <div className="form-group button-container">
                     <button type="submit" className="btn mr-2" id="login-button">Login</button>
                 </div>
+                <Message error show={props.error}>{props.error.email} <br></br>{props.error.password}</Message>
             </Form>
         )}
     />
@@ -62,4 +78,16 @@ const Login = () => {
     )
 }
 
-export default Login
+const mapStateToProps = ({auth}) => ({
+    loading : auth.loading,
+    error: auth.error,
+    isAuth: auth.isAuth
+  });
+  
+  const mapDispatchToProps = {
+    login: loginUser,
+  };
+  
+  
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Login));

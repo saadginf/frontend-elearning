@@ -4,6 +4,29 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 const Navheader = props => {
+  let links;
+  if(!props.isAuth){
+    links=(
+      <Nav>
+      <Nav.Link href="login" id="sign-in">
+        Sign In</Nav.Link>
+      <Nav.Link  href="register" id="sign-up">
+        Sign Up
+      </Nav.Link>
+    </Nav>
+    )
+  } else{
+    links=(
+      <Nav>
+      <Nav.Link  href="profile" id="sign-up">
+        Profile
+      </Nav.Link>
+    </Nav>)
+
+
+  }
+
+
 
     return (
   <Navbar className={props.loc==="/" ? "bg-white": "bg-green" } collapseOnSelect expand="lg" >
@@ -17,12 +40,7 @@ const Navheader = props => {
       <Nav.Link href="#pricing"id="links">Discuss</Nav.Link>
       <Nav.Link href="blog"id="links">Blog</Nav.Link>
     </Nav>
-    <Nav>
-      <Nav.Link href="login" id="sign-in">Sign In</Nav.Link>
-      <Nav.Link  href="register" id="sign-up">
-        Sign Up
-      </Nav.Link>
-    </Nav>
+   {links}
   </Navbar.Collapse>
 </Navbar>
     )
