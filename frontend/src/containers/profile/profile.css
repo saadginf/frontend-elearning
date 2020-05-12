@@ -1,0 +1,102 @@
+.profile-container{
+    background-image: url("../../assets/bg_oc_things_grey.jpeg");
+    border: 1px solid white;
+}
+.user-profile-container{
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.45);
+    width: 70%;
+    margin:  25px auto;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.452);
+    font-family: Montserrat;
+
+}
+.user-info img{
+    border-radius: 100%;
+    height: 100px;
+    margin-right: 10px;
+} 
+.user-info {
+    display: flex;
+}
+.user-details{
+    display: flex;
+    flex-direction: column;
+}
+.user-name{
+    font-size: 20px;
+}
+.user-det{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.user-details a {
+    margin-top: 10px;
+    border: 1px solid #3E4300;
+    background-color:#3E4300 ;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.user-details a:hover{
+    border: 1px solid #3E4300;
+    color: #3E4300;
+    background-color:rgba(63, 67, 0, 0.452) ;
+    transform: translateY(-3px);
+}
+.user-courses{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    flex-wrap: wrap;
+
+}
+.user-courses img{
+    border-radius: 100%;
+}
+.course-progress{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 28px;
+}
+.course-achived{
+    display: flex;
+    align-items: center;
+}
+.course-achived img {
+    background-color: darkred;
+    border-radius: 100%;
+    padding: 5px;
+    margin-right: 10px;
+}
+@media only screen and (max-width: 990px) {
+
+    .user-courses{
+       
+    }
+    .user-courses img{
+        border-radius: 100%;
+        width: 70px;
+        height: 70px;
+        margin-top: 10px;
+    }
+    .course-achived{
+       
+        margin-top: 10px;
+    }
+    .course-achived img{
+       
+        width: 70px;
+        height: 70px;
+    }
+    .user-profile-container{
+     
+        width: 90%;
+        margin:  25px auto;
+        padding: 10px;
+       
+    
+    }
+}

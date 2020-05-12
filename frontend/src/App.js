@@ -18,6 +18,7 @@ import Login from './containers/auth/login/Login'
 import Register from './containers/auth/register/Register'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './store'
+import Profile from './containers/profile/Profile';
 
 
 
@@ -59,6 +60,7 @@ const App = () => {
           <Route path="/login" exact component={Login}/>
           <Route path="/register" exact component={Register}/>
           <Route path="/" exact component={Home}/>
+          <Route path="/profile" exact component={Profile}/>
           <Redirect to="/login"/>
         </Switch>
     )
