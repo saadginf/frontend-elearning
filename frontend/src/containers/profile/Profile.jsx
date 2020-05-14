@@ -1,11 +1,22 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import './profile.css'
+import {withRouter} from 'react-router-dom'
 import sample from '../../assets/avatar.png'
 import image1 from '../../assets/1025.png'
 import image2 from '../../assets/1073.png'
 import image3 from '../../assets/1075.png'
 import image4 from '../../assets/certificate.png'
-const Profile = () => {
+import {connect} from 'react-redux';
+import {logoutUser} from '../../actions/authActions'
+const Profile = props => {
+    useEffect(() => {
+        if(!props.isAuth){
+            props.history.push('/login')
+        }
+        // Update the document title using the browser API
+   
+      });
+
     return (
         <div className="profile-container">
             <div className="user-profile-container">
@@ -13,12 +24,17 @@ const Profile = () => {
                     <img src={sample} alt=""/>
                     <div className='user-details'>
 
-                            <span className="user-name">Saad Abbou</span>
+                            <span className="user-name">{props.user.name}</span>
                             <span className="user-det">Level: 6</span>
                             <span className="user-det">Xp: 1543</span>
 
 
-                            <a href="#">Sign Out</a>
+                            <a href="#" onClick={()=>{
+                                
+                                props.logout()
+                                props.history.push('/')
+                                
+                                }} >Sign Out</a>
 
                     </div>
 
@@ -62,5 +78,15 @@ const Profile = () => {
         </div>
     )
 }
-
-export default Profile
+const mapStateToProps = ({auth}) => ({
+    user : auth.user,
+   isAuth: auth.isAuth
+});
+  
+  const mapDispatchToProps = {
+    logout: logoutUser,
+  };
+  
+  
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Profile));

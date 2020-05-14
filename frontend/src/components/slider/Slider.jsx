@@ -1,9 +1,19 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React from 'react'
+import React , {useEffect}from 'react'
 import Item from './Item'
 import img from '../../assets/1073.png';
+import img1 from '../../assets/1075.png';
+import img2 from '../../assets/1025.png';
+import img3 from '../../assets/1014.png';
+import img4 from '../../assets/1051.png';
+import img5 from '../../assets/1059.png';
+import img6 from '../../assets/1068.png';
+import img7 from '../../assets/1082.png';
+
+import {connect} from 'react-redux';
 import './slider.css'
+import {getAllCourses} from '../../actions/coursesActions'
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1600 },
@@ -23,7 +33,26 @@ const responsive = {
 };
 
 
-const Slider = () => {
+const Slider = props => {
+  useEffect(() => {
+   props.getCourses()
+    // Update the document title using the browser API
+
+  }, []);
+console.log(props.courses.length)
+let items
+if(props.courses.length){
+ items = props.courses.map(course=> (
+  <Item key={course._id} image={img}
+    title={course.title}
+    description={course.description}
+   
+    />
+ ));
+
+}else{
+  items ='loading....'
+}
     return (
        <>
        <div className="viewall">
@@ -47,17 +76,77 @@ const Slider = () => {
         itemClass="carousel-item-padding-40-px"
     
       >
-    
-    <Item image={img}
-    title="Card Title 1"
-    description="This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+      
+    {items}
+
+    <Item image={img1}
+    title="Swift"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
    
     />
+    <Item image={img2}
+    title="JavaScript"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
    
+    />
+     <Item image={img3}
+    title="HTML"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
+   
+    />
+      <Item image={img4}
+    title="C++"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
+   
+    />
+     <Item image={img5}
+    title="PHP"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
+   
+    />
+      <Item image={img7}
+    title="JQUERY"
+    description="This is a wider card with 
+    supporting text below as a natural 
+    supporting text below as a natural
+     lead-in to additional content. Th
+     is content is a little bit longer."
+   
+    />
       </Carousel>
       </>
     )
 }
 
-export default Slider
+const mapStateToProps = ({courses}) => ({
+  courses : courses.courses
+});
+
+const mapDispatchToProps = {
+ getCourses: getAllCourses,
+};
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Slider);
 

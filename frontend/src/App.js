@@ -19,7 +19,7 @@ import Register from './containers/auth/register/Register'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './store'
 import Profile from './containers/profile/Profile';
-
+import Course from './containers/course/Course'
 
 
 
@@ -48,6 +48,8 @@ const App = () => {
           <Route path="/courses" exact component={Courses}/>
           <Route path="/blog" exact component={Blog}/>
           <Route path="/" exact component={Home}/>
+          <Route path="/profile" exact component={Profile}/>
+          <Route path="/courseDetails" exact component={Course}/>
           <Redirect to="/"/>
         </Switch>
     )
@@ -60,7 +62,7 @@ const App = () => {
           <Route path="/login" exact component={Login}/>
           <Route path="/register" exact component={Register}/>
           <Route path="/" exact component={Home}/>
-          <Route path="/profile" exact component={Profile}/>
+         
           <Redirect to="/login"/>
         </Switch>
     )
